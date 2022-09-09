@@ -15,7 +15,7 @@ SE PUEDE ENVIAR EN JSON TAMBIÉN
 # translator = Translator()
 
 def gpt3(stext):
-    openai.api_key=API_KEY
+    openai.api_key= os.environ['API_KEY']
     response = openai.Completion.create(
     engine="text-davinci-002",
     prompt=stext,
