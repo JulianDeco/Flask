@@ -3,15 +3,13 @@ import json
 
 import requests
 
-# from test_bloom import *
-# from test_gpt2 import *
 from test_openai import gpt3
 from flask_cors import CORS
 
 
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "localhost:4000"}})
 
 @app.route("/1")
 def server_info():
@@ -38,7 +36,7 @@ def ia_response():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
 
 # http://localhost:5000/query_ia?str_query=adios

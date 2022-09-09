@@ -2,6 +2,8 @@ import openai
 import os
 from googletrans import Translator
 import json
+from .env import API_KEY
+
 
 """
 INTENTAR CON VOZ
@@ -13,7 +15,7 @@ SE PUEDE ENVIAR EN JSON TAMBIÉN
 # translator = Translator()
 
 def gpt3(stext):
-    openai.api_key='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'
+    openai.api_key=API_KEY
     response = openai.Completion.create(
     engine="text-davinci-002",
     prompt=stext,
