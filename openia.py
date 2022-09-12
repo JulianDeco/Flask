@@ -2,7 +2,6 @@ import openai
 import os
 from googletrans import Translator
 import json
-from .env import API_KEY
 
 
 """
